@@ -47,6 +47,7 @@ public class TestServlet extends HttpServlet {
 		String firstName = request.getParameter("Gian");
 	    String lastName = request.getParameter("Facio");
 	    
+		// This will determine if the input of the User is valid
 		if (firstName == null || firstName.isEmpty() || lastName == null || lastName.isEmpty()) 
 		{
 			request.getRequestDispatcher("TestError.jsp").forward(request, response);
@@ -56,6 +57,8 @@ public class TestServlet extends HttpServlet {
 		
 			request.setAttribute("firstName", firstName);
 			request.setAttribute("lastName", lastName);
+			
+			// This ask for the pull the input to display an ask in Test Response
 			request.getRequestDispatcher("TestResponse.jsp").forward(request, response);
 			}
 	}
