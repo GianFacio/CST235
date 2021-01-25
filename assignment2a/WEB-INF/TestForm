@@ -1,0 +1,18 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Test Form</title>
+</head>
+<body>
+		<form action="TestServlet" method="post">
+		<label id="firstName">First Name:</label>
+		<input name="firstName" type="text"/>
+		<label id="lastName">Last Name:</label>
+		<input name="lastName" type="text"/>
+		<button type="submit">Submit</button>
+	</form>
+</body>
+</html>
