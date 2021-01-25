@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+ xmlns:h="http://java.sun.com/jsf/html"
+ xmlns:ui="http://java.sun.com/jsf/facelets">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>JSF Form Page</title>
+</head>
+<body>
+ <ui:composition>
+	<h:form>
+		<h:inputText id="firstName" required="true" value="#{user.firstName}"> </h:inputText>
+		<h:inputText id="lastName" required="true" value="#{user.lastName}"> </h:inputText>
+		<h:commandButton id="submit" value="Submit" action="#{formController.onSubmit(user)}"> </h:commandButton>
+		<h:commandButton id="onflash" value="Flash" action="#{formController.onFlash(user)}"> </h:commandButton>
+	</h:form>
+ </ui:composition>
+</body>
+</html>
