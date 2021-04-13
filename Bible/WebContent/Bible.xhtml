@@ -1,0 +1,27 @@
+  
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+<h:head>
+
+</h:head> 
+	<h:body> 
+				<ui:composition template ="/layouts/commonLayout.xhtml">
+					<ui:define name="content">
+						<h:form>
+							Book Name:<h:inputText value="#{search.name}" /><br></br>  
+							Chapter #:<h:inputText value="#{search.chapter}" /><br></br>
+							Verse #:<h:inputText value="#{search.verse}" /><br></br>
+				<h:commandButton action="#{searchController.findVerse(search)}" value ="Submit" />
+						</h:form>
+						<h:form>
+							<p> #{scripture.scripture} </p>
+						</h:form>
+					</ui:define>
+				</ui:composition>			
+				
+	</h:body> 
+</html>
